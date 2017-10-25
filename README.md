@@ -1,2 +1,17 @@
-# LogisticRegressionWS
-Logistic Regression WS code
+Hello World!
+
+THIS IS A BASIC MACHINE LEARNING EXAMPLE IMPLEMENTED UNDER COC
+
+LOGISTIC REGRESSION : 
+
+a) NUMPY IMPLEMENTATION : 
+    
+    EPOCHS : 20000
+    LEARNING RATE i.e ALPHA : 0.135
+    Test Accuracy before normalizing Data : : 98.5714285714  
+    Test Accuracy after normalizing Data : : 98.0
+
+b) SKLEARN IMPLEMENTATION :
+
+    TRAIN ACCURACY : 0.977142857143 
+    TEST ACCURACY : 0.982222222222
