@@ -54,8 +54,8 @@ def accuracy(X, y, model):
         if y_predicted[i] == y[i]:
             count += 1
     acc = 1.0 * count*100/len(y)
-
-    print "accuracy associated with this model is " + str(acc)
+    #print "accuracy associated with this model is " + str(acc)
+    return acc
 
 def predict(X,theta):
     return np.dot(X,theta)

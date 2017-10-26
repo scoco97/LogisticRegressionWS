@@ -5,8 +5,8 @@ from utility import *
 
 FILE_NAME_TRAIN = 'train.csv' 
 FILE_NAME_TEST = 'test.csv' 
-ALPHA = 1e-2
-EPOCHS = 20000
+ALPHA = 2.7
+EPOCHS = 50000
 MODEL_FILE = 'models/model1'
 train_flag = True
 
@@ -38,7 +38,7 @@ def costFunc(m,y,y_predicted):
     return (-y)*np.log(y_predicted) - (1 - y)*np.log(1 - y_predicted)
 
 def calcGradients(X,y,y_predicted,m):
-    return np.dot((y_predicted-y),X) 
+    return np.dot((y_predicted-y),X)/m
 
 def makeGradientUpdate(theta, grads):
     return theta - ALPHA * grads
@@ -57,11 +57,11 @@ def main():
         X = appendIntercept(X)
         theta = initialGuess(X.shape[1])
         model = train(theta, X, y, model)
-        print "Test Accuracy without normalizeData : " , accuracy(X,y,model)
+        print "TRAINING DATA ACCURACY : " , accuracy(X,y,model)
         X_df, y_df = loadData(FILE_NAME_TEST)
         X,y = normalizeTestData(X_df, y_df, model)
         X = appendIntercept(X)
-        print "Test Accuracy with normalizeData : " , accuracy(X,y,model)
+        print "TESTING DATA ACCURACY : " , accuracy(X,y,model)
 
 if __name__ == '__main__':
     main()

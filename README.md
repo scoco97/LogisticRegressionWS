@@ -7,8 +7,8 @@ FOLLOWING ARE THE RESULTS : :smile:
 
 #### a) NUMPY IMPLEMENTATION :
 
-   * > __EPOCHS__ : **20000**
-   * > __LEARNING RATE i.e ALPHA__ : **0.135**
+   * > __EPOCHS__ : **50000**
+   * > __LEARNING RATE i.e ALPHA__ : **2.7**
    * > __TRAINING DATA ACCURACY__ : **98.5714285714**  
    * > __TESTING DATA ACCURACY__ : **98.0**
 
